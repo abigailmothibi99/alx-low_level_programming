@@ -1,36 +1,15 @@
 #include "main.h"
 
 /**
- * times_table - prints the 9 times table, starting with 0
+ * _islower - check if char is lowercase
+ * @c: is the char to be checked
+ * Return: 1 if char is lowercase, otherwise 0.
  */
-void times_table(void)
+
+int _islower(int c)
 {
-	int i, j, k;
-
-	for (i = 0; i < 10; i++)
-	{
-		for (j = 0; j < 10; j++)
-		{
-			k = j * i;
-			if (j == 0)
-			{
-				_putchar(k + '0');
-			}
-
-			if (k < 10 && j != 0)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
-				_putchar(k + '0');
-			} else if (k >= 10)
-			{
-				_putchar(',');
-				_putchar(' ');
-				_putchar((k / 10) + '0');
-				_putchar((k % 10) + '0');
-			}
-		}
-		_putchar('\n');
-	}
+	if (c >= 'a' && c <= 'z')
+		return (1);
+	else
+		return (0);
 }
